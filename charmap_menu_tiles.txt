@@ -1,0 +1,43 @@
+# Lunar Legend JP: menu 8x8 name / status tiles (tile 0240 + byte).
+# Font: 0809C8B4 (BIOS LZ77). Records are fixed width, not FF terminated.
+# LV, HP and MP each occupy one tile. Tile 3F is blank.
+
+'シ' = 00
+'ス' = 01
+'テ' = 02
+'ム' = 03
+'フ' = 04
+'ル' = 05
+'ア' = 06
+'レ' = 07
+'ナ' = 08
+'ッ' = 09
+'ュ' = 0A
+'ミ' = 0B
+'キ' = 0C
+'リ' = 0D
+'ー' = 0E
+'ジ' = 0F
+'ェ' = 10
+'カ' = 11
+'ガ' = 12
+'オ' = 13
+'ン' = 14
+'ク' = 15
+'イ' = 16
+'LV' = 17
+'HP' = 18
+'MP' = 19
+'0' = 1A
+'1' = 1B
+'2' = 1C
+'3' = 1D
+'4' = 1E
+'5' = 1F
+'6' = 20
+'7' = 21
+'8' = 22
+'9' = 23
+'ラ' = 24
+'タ' = 25
+' ' = 3F

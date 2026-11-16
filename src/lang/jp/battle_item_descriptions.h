@@ -1,0 +1,18 @@
+/* gBattleItemDescriptions; ROM 0x0839BB4C. Initializer contents only. */
+/* battle_item_descriptions: 16 records, menu encoding. */
+/* 000 */ __("HPを 30かいふくするョ!{END}{END}{END}{END}{END}{END}{END}"),
+/* 001 */ __("HPを 150かいふくするョ!{END}{END}{END}{END}{END}{END}"),
+/* 002 */ __("MPを 50かいふくするョ!{END}{END}{END}{END}{END}{END}{END}"),
+/* 003 */ __("MPを ぜんかいふくするョ!{END}{END}{END}{END}{END}{END}{END}"),
+/* 004 */ __("きぜつから かいふくするョ!{END}{END}{END}{END}{END}{END}{END}"),
+/* 005 */ __("マヒが なおるョ!{END}{END}{END}{END}{END}{END}{END}{END}{END}{END}{END}{END}"),
+/* 006 */ __("どくが きえるョ!{END}{END}{END}{END}{END}{END}{END}{END}{END}{END}{END}{END}"),
+/* 007 */ __("バッドステータスの かいふくだョ!{END}{END}{END}{END}"),
+/* 008 */ __("みずぞくせいの ハンマーだョ!{END}{END}{END}{END}{END}{END}"),
+/* 009 */ __("どうぐでつかうと しょうげきはがでるョ!{END}"),
+/* 010 */ __("ほのおぞくせいの ハンマーだョ!{END}{END}{END}{END}{END}"),
+/* 011 */ __("みずぞくせいの杖だョ!{END}{END}{END}{END}{END}{END}{END}{END}{END}{END}"),
+/* 012 */ __("ほのおぞくせいの杖だョ!{END}{END}{END}{END}{END}{END}{END}{END}{END}"),
+/* 013 */ __("ねむりのこうかがある杖だョ!{END}{END}{END}{END}{END}{END}{END}"),
+/* 014 */ __("みずぞくせいの杖だョ!{END}{END}{END}{END}{END}{END}{END}{END}{END}{END}"),
+/* 015 */ __("ほのおぞくせいの杖だョ!{END}{END}{END}{END}{END}{END}{END}{END}{END}"),

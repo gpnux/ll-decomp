@@ -1,0 +1,21 @@
+/* D_0839D348; ROM 0x0839D348. Initializer contents only. */
+/* enemy_names_extended: 17 records, words encoding. */
+/* 000 */ TEXT16(words, "キャプテン{END}{END}{END}{END}"),
+/* 001 */ TEXT16(words, "リンリン{END}{END}{END}{END}{END}"),
+/* 002 */ TEXT16(words, "メル{END}{END}{END}{END}{END}{END}{END}"),
+/* 003 */ TEXT16(words, "イビルミスト{END}{END}{END}"),
+/* 004 */ TEXT16(words, "フロッグリザード{END}"),
+/* 005 */ TEXT16(words, "グランドゥーム{END}{END}"),
+/* 006 */ TEXT16(words, "ブロンズドック{END}{END}"),
+/* 007 */ TEXT16(words, "テムジン{END}{END}{END}{END}{END}"),
+/* 008 */ TEXT16(words, "黒竜{END}{END}{END}{END}{END}{END}{END}"),
+/* 009 */ TEXT16(words, "バタネン{END}{END}{END}{END}{END}"),
+/* 010 */ TEXT16(words, "魔法{GLYPH_C201}{GLYPH_C301}{END}{END}{END}{END}{END}"),
+/* 011 */ TEXT16(words, "ダミー{END}{END}{END}{END}{END}{END}"),
+/* 012 */ TEXT16(words, "ロウイス{END}{END}{END}{END}{END}"),
+/* 013 */ TEXT16(words, "ゼノビア{END}{END}{END}{END}{END}"),
+/* 014 */ TEXT16(words, "魔法{GLYPH_C201}{GLYPH_C301}ガレオン{END}"),
+/* 015 */ TEXT16(words, "ガーディアン{END}{END}{END}"),
+/* 016 */ TEXT16(words, "ブラックランプ{END}{END}"),
+/* Storage padding / table sentinel. */
+0x0000,

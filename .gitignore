@@ -1,0 +1,64 @@
+# Original/rebuilt ROMs, extracted ROM assets, and emulator saves.
+*.gba
+*.gba.*
+*.sav
+*.srm
+*.ss[0-9]
+*.ss[0-9][0-9]
+/asm/assets/
+/gba_bios.bin
+/tools/gpba/gba_bios.bin
+
+# Rebuildable objects and local Objdiff/clangd artifacts.
+/asm/
+/build/
+/expected/
+/compile_commands.json
+/objdiff
+/objdiff.exe
+
+# Local Python environments, credentials, and caches.
+/.venv/
+/venv/
+/.direnv/
+/.envrc
+.env
+.env.*
+!.env.example
+!.env.sample
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Matching experiments, analysis indexes, and editor temporary files.
+/.scratch/
+/.cache/
+/.codebase-memory/
+*~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Keep symbol/layout configs and the bundled agbcc/preproc/gbafix tools visible
+# to Git. Tool subprojects have local rules.
+
+
+/docs/
+objdiff.json
+.agents
+.codex
+/assets
+# Language initializer headers are build inputs; local manifests stay ignored.
+/src/lang/*
+!/src/lang/jp/
+/src/lang/jp/*
+!/src/lang/jp/*.h
+/src/nonmatching
+AGENTS.md
+/tools/gpba

@@ -1,0 +1,264 @@
+options:
+  platform: gba
+  base_path: ..
+  target_path: baserom.gba
+  output_path: asm
+  gbadisasm_config: config/ll.cfg
+  symbol_addrs_path:
+    - config/symbols.ll.txt
+    - config/symbols.ll.data.txt
+
+sha1: "483b2c37330cf914c121801acd9f15776f92eb29"
+
+# Code module ranges and names are configured below.
+# Same-name rodata belongs to the corresponding code module.
+# Other code, gfx and sound names have independent namespaces.
+# Resource shorthand: [offset, type, name, compress, width].
+segments:
+  - name: ll
+    type: code
+    start: 0x0
+    vram: 0x08000000
+    align: 4
+    subalign: 1
+    subsegments:
+      - [0x000000, asm, startup]
+      - [0x000260, asm, serial_link_arm]
+      - [0x0002A0, c, system]
+      - [0x001354, c, core]
+      - [0x009F70, c, party]
+      - [0x00ACC8, c, menu]
+      - [0x016C88, c, serial_link]
+      - [0x01768C, c, battle]
+      - [0x021130, c, battle_command_menu]
+      - [0x0257D8, c, battle_action_effects]
+      - [0x04473C, c, battle_rules]
+      - [0x04AE2C, c, battle_sprite_wipe]
+      - [0x04B288, c, battle_palette]
+      - [0x04C78C, c, battle_ai]
+      - [0x04DD90, c, battle_items]
+      - [0x04F280, c, script]
+      - [0x0533F0, c, sound]
+      - [0x05389C, asm, sdk/m4a_asm]
+      - [0x05449C, asm, sdk/m4a]
+      - [0x055984, asm, sdk/bios]
+      - [0x0559B0, asm, sdk/sram]
+      - [0x055B44, asm, sdk/call_via]
+      - [0x055B80, asm, sdk/libgcc]
+      - [0x05763C, asm, sdk/memcpy]
+      - [0x05769A]
+  - name: gfx
+    type: gfx
+    start: 0x05769A
+    subsegments:
+      - [0x05769A, bin, code_tail_padding]
+      - [0x05769C, rodata, system]
+      - [0x057850, bin, rom_data_057850]
+      - [0x057854, rodata, core]
+      - [0x057A7F, bin, rom_data_057a7f]
+      - [0x057A80, rodata, core]
+      - [0x0583C1, bin, rom_data_0583c1]
+      - [0x0583C4, rodata, core]
+      - [0x058812, bin, rom_data_058812]
+      - [0x05881C, rodata, core]
+      - [0x058854, bin, rom_data_058854]
+      - [0x058864, rodata, core]
+      - [0x0597D4, bin, rom_data_0597d4]
+      - [0x0798A8, rodata, core]
+      - [0x079C48, bin, rom_data_079c48]
+      - [0x086C1C, rodata, core]
+      - [0x087218, bin, rom_data_087218]
+      - [0x08727C, rodata, core]
+      - [0x089B90, rodata, menu]
+      - [0x089BC4, rodata, core]
+      - [0x08A230, bin, rom_data_08a230]
+      - [0x08A234, rodata, core]
+      - [0x08B1B4, rodata, script]
+      - [0x08B1D4, bin, rom_data_08b1d4]
+      - [0x08B7D4, rodata, menu]
+      - [0x08B814, bin, rom_data_08b814]
+      - [0x08EA0C, rodata, core]
+      - [0x08EA5C, bin, rom_data_08ea5c]
+      - [0x091948, rodata, core]
+      - [0x0921EE, bin, rom_data_0921ee]
+      - [0x0921F0, rodata, party]
+      - [0x09354E, bin, rom_data_09354e]
+      - [0x093550, rodata, menu]
+      - [0x095A18, bin, rom_data_095a18]
+      - [0x095A1C, rodata, core]
+      - [0x095C8E, bin, rom_data_095c8e]
+      - [0x095C94, rodata, core]
+      - [0x095F0E, bin, rom_data_095f0e]
+      - [0x095F14, rodata, core]
+      - [0x096197, bin, rom_data_096197]
+      - [0x09619C, rodata, core]
+      - [0x0963C0, rodata, menu]
+      - [0x0976E4, rodata, core]
+      - [0x097B5E, bin, rom_data_097b5e]
+      - [0x097B60, rodata, menu]
+      - [0x0981AF, bin, rom_data_0981af]
+      - [0x0981B0, rodata, menu]
+      - [0x098248, bin, rom_data_098248]
+      - [0x09824A, rodata, menu]
+      - [0x098334, rodata, menu]
+      - [0x098789, bin, rom_data_098789]
+      - [0x09878A, rodata, menu]
+      - [0x0987A4, rodata, menu]
+      - [0x098B5B, bin, rom_data_098b5b]
+      - [0x09C834, rodata, core]
+      - [0x09C894, bin, rom_data_09c894]
+      - [0x09CB90, rodata, core]
+      - [0x09D197, bin, rom_data_09d197]
+      - [0x09D198, rodata, core]
+      - [0x09D715, bin, rom_data_09d715]
+      - [0x09D718, rodata, core]
+      - [0x09DCE5, bin, rom_data_09dce5]
+      - [0x09DCE8, rodata, core]
+      - [0x09E4E2, bin, rom_data_09e4e2]
+      - [0x09E4E4, rodata, menu]
+      - [0x0A12CD, bin, rom_data_0a12cd]
+      - [0x0A12D0, rodata, menu]
+      - [0x0A1310, bin, rom_data_0a1310]
+      - [0x0B9DFC, rodata, core]
+      - [0x0BAADC, bin, rom_data_0baadc]
+      - [0x0BABA0, rodata, core]
+      - [0x0BABE0, bin, rom_data_0babe0]
+      - [0x2893EC, rodata, core]
+      - [0x295E6C, bin, rom_data_295e6c]
+      - [0x30FC04, rodata, menu]
+      - [0x30FEC8, rodata, core]
+      - [0x31024B, bin, rom_data_31024b]
+      - [0x31024C, rodata, core]
+      - [0x311003, bin, rom_data_311003]
+      - [0x311004, rodata, core]
+      - [0x311343, bin, rom_data_311343]
+      - [0x311344, rodata, core]
+      - [0x3114E2, bin, rom_data_3114e2]
+      - [0x3114E4, rodata, core]
+      - [0x311751, bin, rom_data_311751]
+      - [0x311754, rodata, core]
+      - [0x3119D5, bin, rom_data_3119d5]
+      - [0x3119D8, rodata, core]
+      - [0x3127DF, bin, rom_data_3127df]
+      - [0x3127E0, rodata, core]
+      - [0x312D31, bin, rom_data_312d31]
+      - [0x312D34, rodata, core]
+      - [0x313006, bin, rom_data_313006]
+      - [0x31368C, rodata, core]
+      - [0x313C4D, bin, rom_data_313c4d]
+      - [0x313C50, rodata, core]
+      - [0x313E9C, bin, rom_data_313e9c]
+      - [0x32534C, rodata, core]
+      - [0x325546, bin, rom_data_325546]
+      - [0x325548, rodata, core]
+      - [0x325E4B, bin, rom_data_325e4b]
+      - [0x38EEF4, rodata, core]
+      - [0x38F6D4, bin, rom_data_38f6d4]
+      - [0x393288, rodata, core]
+      - [0x3937E8, rodata, menu]
+      - [0x3939F7, bin, rom_data_3939f7]
+      - [0x3939F8, rodata, battle]
+      - [0x393A05, bin, rom_data_393a05]
+      - [0x393A18, rodata, battle]
+      - [0x393A3C, rodata, battle]
+      - [0x393A40, bin, rom_data_393a40]
+      - [0x393A44, rodata, battle]
+      - [0x393A52, bin, rom_data_393a52]
+      - [0x393A54, rodata, battle_command_menu]
+      - [0x393B14, rodata, battle]
+      - [0x393B19, bin, rom_data_393b19]
+      - [0x393B28, rodata, core]
+      - [0x3988A8, rodata, battle]
+      - [0x3989B0, rodata, battle]
+      - [0x3989FC, rodata, core]
+      - [0x399B58, rodata, battle]
+      - [0x39B2E0, rodata, battle_rules]
+      - [0x39BB4C, rodata, battle_items]
+      - [0x39BCCC, bin, rom_data_39bccc]
+      - [0x39C80C, rodata, core]
+      - [0x39CC4C, rodata, battle_rules]
+      - [0x39CD5C, rodata, battle_action_effects]
+      - [0x39CE38, rodata, battle_ai]
+      - [0x39CE7C, rodata, battle]
+      - [0x39CEC0, bin, rom_data_39cec0]
+      - [0x39CEC4, rodata, battle_action_effects]
+      - [0x39CEFC, rodata, battle_items]
+      - [0x39CFBA, rodata, battle_rules]
+      - [0x39D47C, rodata, battle_action_effects]
+      - [0x39D5BC, rodata, battle_rules]
+      - [0x39D8EC, rodata, battle]
+      - [0x39D9B8, rodata, battle_items]
+      - [0x39DBF5, bin, rom_data_39dbf5]
+      - [0x39DBF6, rodata, battle_action_effects]
+      - [0x39DF1E, rodata, battle_command_menu]
+      - [0x39DF4B, bin, rom_data_39df4b]
+      - [0x39DF5C, rodata, battle]
+      - [0x39DF64, bin, rom_data_39df64]
+      - [0x553734, rodata, battle]
+      - [0x556DF4, bin, rom_data_556df4]
+      - [0x56B440, rodata, battle]
+      - [0x56B4E8, bin, rom_data_56b4e8]
+      - [0x619430, rodata, battle_rules]
+      - [0x619AA4, rodata, battle]
+      - [0x619FE4, rodata, battle]
+      - [0x61A4A4, rodata, battle]
+      - [0x61A7A4, rodata, battle_command_menu]
+      - [0x61A7E4, rodata, battle]
+      - [0x61AAA4, rodata, battle_sprite_wipe]
+      - [0x61AD24, bin, rom_data_61ad24]
+      - [0x61C624, rodata, battle_command_menu]
+      - [0x61C664, rodata, battle]
+      - [0x61C744, rodata, battle]
+      - [0x61C764, rodata, battle_sprite_wipe]
+      - [0x61C784, bin, rom_data_61c784]
+      - [0x62D434, rodata, script]
+      - [0x62D856, bin, rom_data_62d856]
+      - [0x6AF4EC]
+  - name: sound
+    type: sound
+    start: 0x6AF4EC
+    subsegments:
+      - start: 0x6AF4EC
+        type: sound
+        name: sound_assets
+        resource_start: 0x6AF4EC
+        resource_end: 0x7E82D4
+        resource_name: sound/sound
+        song_table: 0x6B0E80
+        song_count: 285
+        mplay_table: 0x6B0E44
+        mplay_count: 5
+        voicegroup_end: 0x6B0D34
+      - [0x6B0E44, rodata, sound]
+      - start: 0x6B1768
+        type: sound
+        name: sound_assets_tail
+        resource_start: 0x6AF4EC
+        resource_end: 0x7E82D4
+        resource_name: sound/sound
+        song_table: 0x6B0E80
+        song_count: 285
+        mplay_table: 0x6B0E44
+        mplay_count: 5
+        voicegroup_end: 0x6B0D34
+      - [0x7E82D4]
+  - name: gfx_tail
+    type: gfx
+    start: 0x7E82D4
+    subsegments:
+      - [0x7E82D4, bin, rom_data_7e82d4]
+      - [0x7E83F0, rodata, system]
+      - [0x7E83F8, rodata, core]
+      - [0x7EA580, rodata, party]
+      - [0x7EB180, rodata, menu]
+      - [0x7EB310, bin, rom_data_7eb310]
+      - [0x7EBB20, rodata, core]
+      - [0x7EBDF0, rodata, battle]
+      - [0x7EBE00, rodata, core]
+      - [0x7ED394, rodata, battle]
+      - [0x7ED5CC, rodata, battle]
+      - [0x7ED6D4, rodata, script]
+      - [0x7ED910, rodata, sound]
+      - [0x7EDC90, bin, rom_data_7edc90]
+      - [0x800000]
+  - [0x800000]
